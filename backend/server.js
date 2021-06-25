@@ -13,15 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
-  .connect(
-    process.env.MONGODB_URL ||
-      "mongodb+srv://root:1234@seoblog.qewec.mongodb.net/amazonia?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    }
-  )
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then(() => console.log("connected to database"))
   .catch((err) => console.log(err.message));
 
