@@ -22,7 +22,7 @@ export const register = (name, email, password) => async (dispatch) => {
       email,
       password,
     });
-    console.log("data => ", data);
+    // console.log("data => ", data);
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
     dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
     localStorage.setItem("userInfo", JSON.stringify(data));
@@ -44,7 +44,7 @@ export const signIn = (email, password) => async (dispatch) => {
   });
   try {
     const { data } = await axios.post(`${url}/signin`, { email, password });
-    console.log("data => ", data);
+    // console.log("data => ", data);
     dispatch({
       type: USER_SIGNIN_SUCCESS,
       payload: data,

@@ -14,7 +14,7 @@ export const productsList = () => async (dispatch) => {
     type: PRODUCT_LIST_REQUEST,
   });
   try {
-    console.log(`server uri=> ${SERVER_URI}/api/products`);
+    // console.log(`server uri=> ${SERVER_URI}/api/products`);
     const { data } = await axios.get(`${SERVER_URI}/api/products`);
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
