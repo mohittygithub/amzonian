@@ -1,4 +1,4 @@
-export const SERVER_URI = "http://127.0.0.1:5000";
+export const SERVER_URI = process.env.REACT_APP_SERVER_URL;
 
 export const PRODUCT_LIST_REQUEST = "PRODUCT_LIST_REQUEST";
 export const PRODUCT_LIST_SUCCESS = "PRODUCT_LIST_SUCCESS";
